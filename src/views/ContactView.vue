@@ -4,21 +4,21 @@
 
 <template>
   <div id="app">
-    <div class="home">
-      <h1>Gator Packaging | Home</h1>
+    <div class="contact">
+      <h1>Gator Packaging | Contact</h1>
     </div>
   </div>
 </template>
 
 <style>
-.home {
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.home h1 {
+.contact h1 {
   font-size: 40px;
   margin-top: 30px;
 }

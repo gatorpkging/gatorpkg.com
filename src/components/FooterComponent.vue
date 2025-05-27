@@ -1,17 +1,17 @@
 <script>
-import RoboIcon from './icons/RoboIcon.vue';
+import GatorPkgIcon from '@/components/icons/GatorPkgIcon.vue'
 
 export default {
   name: "FooterComponent",
   components: {
-    RoboIcon,
+    RoboIcon: GatorPkgIcon
   }
-};
+}
 </script>
 
 <template>
   <div class="footer">
-    <p>© 2023 WIHI Robotics</p>
+    <p>© 2025 Gator Packaging</p>
 
     <div class="logo">
       <RoboIcon />
@@ -42,7 +42,8 @@ export default {
   position: relative;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;;
+  color: #fff;
+  ;
 }
 
 .logo svg {
