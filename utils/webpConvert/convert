@@ -1,0 +1,130 @@
+#!/bin/bash
+
+# WebP Batch Converter (input -> output folders)
+# Usage: ./convert_to_webp.sh
+# Reads from 'input' folder and outputs to 'output' folder
+
+# Check if cwebp is installed
+if ! command -v cwebp &> /dev/null; then
+    echo "Error: cwebp is not installed. Please install libwebp-tools."
+    exit 1
+fi
+
+# Set input and output folders
+input_folder="input"
+output_folder="output"
+
+# Check if input folder exists
+if [ ! -d "$input_folder" ]; then
+    echo "Error: Input folder '$input_folder' does not exist."
+    echo "Please create an 'input' folder and place your images there."
+    exit 1
+fi
+
+# Create output folder if it doesn't exist
+if [ ! -d "$output_folder" ]; then
+    echo "Creating output folder '$output_folder'..."
+    mkdir -p "$output_folder"
+fi
+
+# Supported image extensions
+extensions=("jpg" "jpeg" "png" "tiff" "tif" "bmp" "gif")
+
+# Find all image files in the input folder (including subdirectories)
+image_files=()
+for ext in "${extensions[@]}"; do
+    while IFS= read -r -d '' file; do
+        image_files+=("$file")
+    done < <(find "$input_folder" -type f \( -iname "*.${ext}" \) -print0 2>/dev/null)
+done
+
+# Check if any image files were found
+if [ ${#image_files[@]} -eq 0 ]; then
+    echo "No supported image files found in '$input_folder'"
+    echo "Supported formats: ${extensions[*]}"
+    exit 1
+fi
+
+# Counter for tracking conversions
+converted=0
+failed=0
+skipped=0
+total_files=${#image_files[@]}
+current=0
+
+# Function to display progress bar
+show_progress() {
+    local current=$1
+    local total=$2
+    local width=50
+    local percentage=$((current * 100 / total))
+    local filled=$((current * width / total))
+    local empty=$((width - filled))
+    
+    printf "\rProgress: ["
+    printf "%*s" $filled | tr ' ' '='
+    printf "%*s" $empty | tr ' ' '-'
+    printf "] %d/%d (%d%%)" $current $total $percentage
+}
+
+echo "Found $total_files image files in '$input_folder'"
+echo "Converting to WebP format..."
+echo "Output folder: '$output_folder'"
+echo "----------------------------------------"
+
+# Process each file
+for file in "${image_files[@]}"; do
+    ((current++))
+    
+    # Show progress bar
+    show_progress $current $total_files
+    
+    # Get relative path from input folder
+    relative_path="${file#$input_folder/}"
+    
+    # Get filename without extension and directory structure
+    filename=$(basename "$file")
+    name="${filename%.*}"
+    relative_dir=$(dirname "$relative_path")
+    
+    # Create output directory structure if needed
+    if [ "$relative_dir" != "." ]; then
+        output_dir="$output_folder/$relative_dir"
+        mkdir -p "$output_dir"
+        output="$output_dir/${name}.webp"
+    else
+        output="$output_folder/${name}.webp"
+    fi
+    
+    # Skip if WebP file already exists
+    if [ -f "$output" ]; then
+        ((skipped++))
+        continue
+    fi
+    
+    # Convert the image (suppress output for cleaner progress bar)
+    if cwebp -preset photo -q 75 "$file" -o "$output" &>/dev/null; then
+        ((converted++))
+    else
+        printf "\n✗ Failed to convert: $file\n"
+        ((failed++))
+    fi
+done
+
+# Clear the progress bar line and show completion
+printf "\n\n"
+
+# Summary
+echo "----------------------------------------"
+echo "Conversion complete!"
+echo "Successfully converted: $converted files"
+if [ $skipped -gt 0 ]; then
+    echo "Skipped (already exists): $skipped files"
+fi
+if [ $failed -gt 0 ]; then
+    echo "Failed conversions: $failed files"
+fi
+echo ""
+echo "Input folder: $input_folder"
+echo "Output folder: $output_folder"
+echo "WebP files are ready in the output folder!"
