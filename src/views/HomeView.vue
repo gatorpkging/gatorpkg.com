@@ -1,4 +1,5 @@
 <script setup>
+import ImageBannerComponent from '@/components/ImageBannerComponent.vue';
 
 </script>
 
@@ -6,6 +7,7 @@
   <div id="app">
     <div class="home">
       <h1>Gator Packaging | Home</h1>
+      <ImageBannerComponent />
     </div>
   </div>
 </template>
