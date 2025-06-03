@@ -27,12 +27,13 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  height: 6vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.3rem 2rem;
-  background-color: #414649;
+  background-color: #222222;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   z-index: 1000;

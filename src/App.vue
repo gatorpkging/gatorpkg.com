@@ -1,6 +1,5 @@
 <script setup>
 import HeaderComponent from './components/HeaderComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <template>
@@ -20,8 +19,7 @@ import FooterComponent from './components/FooterComponent.vue';
   align-items: center;
   justify-content: center;
   color: white;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 3vh;
   font-family: "Lexend", sans-serif;
 }
 
@@ -29,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #212528;
+  background-color: #4169E1;
   overflow-x: hidden;
 }
 </style>

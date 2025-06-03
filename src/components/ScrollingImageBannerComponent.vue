@@ -15,6 +15,20 @@ const images = [
 
 export default {
   name: "ScrollingImageBannerComponent",
+  props: {
+    text1: {
+      type: String,
+      default: 'High Quality Materials'
+    },
+    text2: {
+      type: String,
+      default: 'Custom Designs'
+    },
+    text3: {
+      type: String,
+      default: 'Competitive Pricing'
+    }
+  },
   data() {
     return {
       images: images
@@ -31,6 +45,13 @@ export default {
 
 <template>
   <div class="image-banner">
+    <div class="overlay-text">
+      <h2>{{ text1 }}</h2>
+      <hr>
+      <h2>{{ text2 }}</h2>
+      <hr>
+      <h2>{{ text3 }}</h2>
+    </div>
     <div class="scrolling-images">
       <img v-for="(image, index) in allImages" :key="index" :src="image" alt="Banner Image" loading="eager" />
     </div>
@@ -41,26 +62,59 @@ export default {
 .image-banner {
   width: 100%;
   overflow: hidden;
-  margin: 30px 0;
 }
 
 .scrolling-images {
   display: flex;
   width: max-content;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 60s linear infinite;
 }
 
 .scrolling-images img {
-  width: 400px;
+  width: 650px;
   height: auto;
   flex-shrink: 0;
-  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-  margin-right: -40px; /* Overlap to close the gap */
+  margin-right: 10px;
+  border: 3px solid #000000;
 }
 
 @keyframes scroll-left {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-4000px); } /* imageWidth * totalImageCount */
+  100% { transform: translateX(calc(-650px * 12)); }
 }
 
+.overlay-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  right: 15%;
+  width: 450px;
+  height: 487.50px;
+  transform: skewX(-20deg);
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.overlay-text h2 {
+  position: relative;
+  transform: skewX(20deg);
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(45, 52, 175);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.overlay-text hr {
+  position: relative;
+  border: none;
+  background: #a0a0a0;
+  height: 5px;
+  width: 80%;
+  position: relative;
+  transform: skewX(20deg);
+}
 </style>

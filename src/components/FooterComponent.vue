@@ -21,15 +21,15 @@ export default {
 
 <style scoped>
 .footer {
-  position: fixed;
-  top: calc(100vh - 76px);
+  position: relative;
   left: 0;
-  width: 100%;
+  height: 6vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0rem 2rem;
-  background-color: #212528;
+  background-color: #222222;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
