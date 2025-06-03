@@ -54,7 +54,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 
 .about-container h1 {
   position: relative;
-  font-size: 85px;
+  font-size: 3.5vw;
   margin: 20px 0;
   text-align: center;
   transform: translateY(35%);
