@@ -41,11 +41,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
   justify-content: center;
 }
 
-.home h1 {
-  font-size: 40px;
-  margin-top: 30px;
-}
-
 .gator-pkg-icon {
   width: 500px;
   height: 500px;
@@ -53,13 +48,13 @@ import FooterComponent from '@/components/FooterComponent.vue';
 
 .about-container {
   display: flex;
-  max-width: 90vw;
+  max-width: 70vw;
   text-align: center;
 }
 
 .about-container h1 {
   position: relative;
-  font-size: 3.5vw;
+  font-size: 85px;
   margin: 20px 0;
   text-align: center;
   transform: translateY(35%);
