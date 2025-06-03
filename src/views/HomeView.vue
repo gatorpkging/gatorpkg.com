@@ -1,5 +1,5 @@
 <script setup>
-import ImageBannerComponent from '@/components/ImageBannerComponent.vue';
+import ScrollingImageBannerComponent from '@/components/ScrollingImageBannerComponent.vue';
 
 </script>
 
@@ -7,7 +7,7 @@ import ImageBannerComponent from '@/components/ImageBannerComponent.vue';
   <div id="app">
     <div class="home">
       <h1>Gator Packaging | Home</h1>
-      <ImageBannerComponent />
+      <ScrollingImageBannerComponent />
     </div>
   </div>
 </template>

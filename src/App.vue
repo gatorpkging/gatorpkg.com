@@ -30,5 +30,6 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #212528;
+  overflow-x: hidden;
 }
 </style>
