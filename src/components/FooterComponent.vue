@@ -23,7 +23,7 @@ export default {
 .footer {
   position: relative;
   left: 0;
-  height: 6vh;
+  height: 75px;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -33,7 +33,6 @@ export default {
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  border-top: #384046 2px solid;
 }
 
 .logo {

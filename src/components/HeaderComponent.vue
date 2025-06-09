@@ -27,7 +27,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  height: 6vh;
+  height: 75px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ export default {
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 2rem;
 }
 
 .nav-links a {

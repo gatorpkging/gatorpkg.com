@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
 .image-banner {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -74,7 +74,7 @@ export default {
   width: 650px;
   height: auto;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 0.5rem;
   border: 3px solid #000000;
 }
 
@@ -90,7 +90,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 10%;
-  right: 15%;
+  right: 15vw;
   width: 450px;
   height: 487.50px;
   transform: skewX(-20deg);
@@ -101,7 +101,7 @@ export default {
 .overlay-text h2 {
   position: relative;
   transform: skewX(20deg);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: rgb(45, 52, 175);
   text-align: center;
@@ -112,7 +112,7 @@ export default {
   position: relative;
   border: none;
   background: #a0a0a0;
-  height: 5px;
+  height: 0.25rem;
   width: 80%;
   position: relative;
   transform: skewX(20deg);

@@ -7,11 +7,11 @@ import FooterComponent from '@/components/FooterComponent.vue';
 <template>
   <div id="app">
     <div class="home">
-      <div class="about-container">
+      <div class="about-header">
         <GatorPkgIcon class="gator-pkg-icon"/>
         <h1> Gator Packaging, INC.</h1>
       </div>
-      <div class="about">
+      <div class="about-content">
         <hr>
         <p>
           Gator Packaging is a privately owned industrial packaging company with over 30 years of experience located in Dexter, MI. near Ann Arbor. Gator Packaging currently does business with a diverse group
@@ -20,17 +20,19 @@ import FooterComponent from '@/components/FooterComponent.vue';
           pallets, converts various foam (polystyrene, polyethylene, and polyurethane) to each customer specification, and designs and distributes all forms of corrugated items such as cartons, displays, and pallets.
         </p>
       </div>
-      </div>
       <ScrollingImageBannerComponent class="scrolling-image-banner-component"/>
-      <div class="footer-home">
+
+      <div class="contact-info">
+        <hr>
         <img src="/images/sawblade.webp" alt="sawblade" loading="eager" />
         <h2>Need a quote or more information?</h2>
-        <h3>Contanct: Julie Chapman (Office Manager / Customer Service)</h3>
+        <h3>Contact: Julie Chapman (Office Manager / Customer Service)</h3>
         <h3>Email: <a href="mailto:info@gatorpkg.com">info@gatorpkg.com</a> </h3>
         <h3>Phone: <a href="tel:734-222-8265">734-222-8265</a></h3>
       </div>
       <FooterComponent />
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -41,47 +43,44 @@ import FooterComponent from '@/components/FooterComponent.vue';
   justify-content: center;
 }
 
-.gator-pkg-icon {
-  width: 500px;
-  height: 500px;
-}
-
-.about-container {
-  display: flex;
+.about-header {
+  display: table;
   max-width: 70vw;
   text-align: center;
 }
 
-.about-container h1 {
+.about-header .gator-pkg-icon {
+  display: table-cell;
+  width: 35rem;
+  height: auto;
+}
+
+.about-header h1 {
+  display: table-cell;
   position: relative;
-  font-size: 3.5vw;
-  margin: 20px 0;
+  font-size: 4rem;
+  margin: 1rem;
   text-align: center;
-  transform: translateY(35%);
+  vertical-align: middle;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.about {
-  width: 90%;
+.about-content {
+  width: 90vw;
   max-width: 90vw;
-  margin: -60px 20px 20px 20px;
+  margin: -2.25rem 1rem 1rem 1rem;
   text-align: center;
 }
 
-.about h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.about hr {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.about-content hr {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #222222;
 }
 
-.about p {
-  font-size: 24px;
+.about-content p {
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -89,31 +88,38 @@ import FooterComponent from '@/components/FooterComponent.vue';
   margin-top: 30px;
 }
 
-.footer-home {
-  width: 90%;
+.contact-info {
+  width: 90vw;
   max-width: 90vw;
-  margin: 20px auto;
+  margin: 1rem;
   text-align: center;
 }
 
-.footer-home img {
+.contact-info img {
   width: 130px;
   height: auto;
   max-width: 500px;
+  margin-top: 1rem;
 }
 
-.footer-home h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.footer-home h3 {
-  font-size: 20px;
-  margin: 5px 0;
+.contact-info h3 {
+  font-size: 1.25rem;
+  margin: 0.3rem;
 }
 
-.footer-home a {
+.contact-info a {
   color: #b9dbff;
   text-decoration: underline;
+}
+
+.contact-info hr {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #222222;
 }
 </style>
