@@ -21,7 +21,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
-        run: npm run build
+        run: vite build
 
       - name: Copy CNAME to dist folder
         run: cp CNAME ./dist
