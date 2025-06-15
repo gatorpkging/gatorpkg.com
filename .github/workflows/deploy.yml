@@ -21,6 +21,8 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
+        env:
+          VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
         run: vite build
 
       - name: Copy CNAME to dist folder
@@ -47,8 +49,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
