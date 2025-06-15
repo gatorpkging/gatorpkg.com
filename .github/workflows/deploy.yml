@@ -1,21 +1,16 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: deploy
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ['main']
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: true
@@ -24,7 +19,6 @@ env:
   VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -42,12 +36,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Copy CNAME to dist folder
+        run: cp CNAME ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
