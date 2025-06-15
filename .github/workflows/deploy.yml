@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
+
 jobs:
   build:
     name: Build
@@ -21,8 +24,6 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
-        env:
-          VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
         run: npm run build
 
       - name: Copy CNAME to dist folder
