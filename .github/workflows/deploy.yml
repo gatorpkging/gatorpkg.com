@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         env:
           VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
-        run: vite build
+        run: npm run build
 
       - name: Copy CNAME to dist folder
         run: cp CNAME ./dist
