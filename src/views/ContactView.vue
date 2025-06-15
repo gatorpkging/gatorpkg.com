@@ -118,8 +118,9 @@ const submitForm = async (event) => {
           <span class="error-message" v-if="errors.phone">{{ errors.phone }}</span>
 
           <label for="subject">Subject</label>
-          <input id="subject" type="text" v-model="formData.subject"
+          <input id="subject" type="text" v-model="formData.subject" :class="{ error: errors.subject }"
             placeholder="Enter your subject" />
+          <span class="error-message" v-if="errors.subject">{{ errors.subject }}</span>
 
           <label for="message">Message</label>
           <textarea id="message" v-model="formData.message" :class="{ error: errors.message }"
@@ -217,10 +218,10 @@ const submitForm = async (event) => {
   top: 0;
   left: 0;
   color: white;
-  border: #384046 3px solid;
-  background-color: #262A2D;
+  border: #303030 3px solid;
+  background-color: #222222;
   border-radius: 10px;
-  width: 40vw;
+  width: 90vw;
   min-width: 400px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -245,7 +246,7 @@ const submitForm = async (event) => {
   margin-bottom: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #384046;
+  background-color: #303030;
   color: white;
 }
 
@@ -255,7 +256,7 @@ const submitForm = async (event) => {
 }
 
 .contact-form button {
-  background-color: #384046;
+  background-color: #303030;
   color: white;
   border: none;
   border-radius: 5px;
@@ -265,11 +266,11 @@ const submitForm = async (event) => {
 }
 
 .contact-form button:hover {
-  background-color: #4d565d;
+  background-color: #404040;
 }
 
 .contact-form button:active {
-  background-color: #1A2023;
+  background-color: #353535;
 }
 
 .contact-form .error-message {
