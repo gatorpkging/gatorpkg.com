@@ -4,7 +4,7 @@ import GatorPkgIcon from '@/components/icons/GatorPkgIcon.vue'
 export default {
   name: "FooterComponent",
   components: {
-    RoboIcon: GatorPkgIcon
+    GatorPkgIcon
   }
 }
 </script>
@@ -14,7 +14,7 @@ export default {
     <p>© 2025 Gator Packaging</p>
 
     <div class="logo">
-      <RoboIcon />
+      <GatorPkgIcon />
     </div>
   </div>
 </template>

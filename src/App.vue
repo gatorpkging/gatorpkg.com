@@ -6,7 +6,6 @@ import HeaderComponent from './components/HeaderComponent.vue';
   <div id="app">
     <HeaderComponent />
     <router-view></router-view>
-    <FooterComponent />
   </div>
 </template>
 

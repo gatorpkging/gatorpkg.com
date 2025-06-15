@@ -54,7 +54,7 @@ const validateForm = () => {
 
 const sendEmail = async () => {
   try {
-    await emailjs.send('service_djn9mjb', 'template_qye7i4c',
+    await emailjs.send(`${process.env.VITE_EMAILJS_SERVICE_ID}`, `${process.env.VITE_EMAILJS_TEMPLATE_ID}`,
       {
         name: formData.value.name,
         email: formData.value.email,
@@ -62,7 +62,7 @@ const sendEmail = async () => {
         subject: formData.value.subject,
         message: formData.value.message
       },
-      'EnaiY9hzBFmjbtriv'
+      `${process.env.VITE_EMAILJS_USER_ID}`
     );
     popupMessage.value = 'Your message has been sent successfully!';
     formData.value = { name: '', email: '', phone: '', subject: '', message: ''};
