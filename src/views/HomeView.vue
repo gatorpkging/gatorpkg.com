@@ -16,8 +16,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <p>
           Gator Packaging is a privately owned industrial packaging company with over 30 years of experience located in Dexter, MI. near Ann Arbor. Gator Packaging currently does business with a diverse group
           of customers such as: Paladin Brands, Sweepster Broom, General Inspection, Roush Performance Products, and Zoller, Inc. We have a team of experts that have many years of experience in
-          various areas of industrial packaging. We work together to provide our customers with the most accurate and cost effective solutions to meet their packaging needs. Gator Packaging manufactures custom crates and
-          pallets, converts various foam (polystyrene, polyethylene, and polyurethane) to each customer specification, and designs and distributes all forms of corrugated items such as cartons, displays, and pallets.
+          various areas of industrial packaging. We work together to provide our customers with the most accurate and cost effective solutions to meet their packaging needs.
         </p>
       </div>
       <ScrollingImageBannerComponent class="scrolling-image-banner-component"/>

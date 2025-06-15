@@ -12,7 +12,10 @@ import FooterComponent from '@/components/FooterComponent.vue';
       </div>
       <div class="services-content">
         <hr>
-        <h3>We are ISPM-15 certified to produce and prepare pallets and crates that are compliant for export shipments.</h3>
+        <h3>
+          Gator Packaging manufactures custom crates and pallets, converts various foam (polystyrene, polyethylene, and polyurethane) to each customer specification, and designs and distributes all forms
+          of corrugated items such as cartons, displays, and pallets. We are ISPM-15 certified to produce and prepare pallets and crates that are compliant for export shipments. 
+        </h3>
         <h2>Specialty Crates & Pallets </h2>
         <div class="img-group">
           <img src="/images/banner/1.webp" alt="services1" loading="eager" />
@@ -80,6 +83,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 20px;
 }
 
