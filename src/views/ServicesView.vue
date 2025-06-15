@@ -14,8 +14,8 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <hr>
         <h3>
           Gator Packaging manufactures custom crates and pallets, converts various foam (polystyrene, polyethylene, and polyurethane) to each customer specification, and designs and distributes all forms
-          of corrugated items such as cartons, displays, and pallets. We also offer order processing and fullfilment, sorting, secondary work, repacking, shrink wrapping, and banding. Need to ship overseas? 
-          We are ISPM-15 certified to produce and prepare pallets and crates that are compliant for export shipments. 
+          of corrugated items such as cartons, displays, and pallets. We also offer order processing and fullfilment, sorting, secondary work, repacking, shrink wrapping, and banding. Need to ship overseas?
+          We are ISPM-15 certified to produce and prepare pallets and crates that are compliant for export shipments.
         </h3>
         <h2>Specialty Crates & Pallets </h2>
         <div class="img-group">
@@ -89,7 +89,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 .services-content hr {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
   width: 90vw;
 }
 
@@ -153,7 +153,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 .contact-info hr {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 
 </style>

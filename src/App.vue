@@ -27,7 +27,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #4169E1;
+  background-color: #1e3784;
   overflow-x: hidden;
+}
+
+.link {
+  color: #7ac3ff;
+  text-decoration: underline;
 }
 </style>

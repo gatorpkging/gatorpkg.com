@@ -94,8 +94,8 @@ const submitForm = async (event) => {
         <div class="contact-text">
           <h1>Contact Us</h1>
           <h3>Contact: Julie Chapman (Office Manager / Customer Service)</h3>
-          <h3>Email: <a href="mailto:info@gatorpkg.com">info@gatorpkg.com</a> </h3>
-          <h3>Phone: <a href="tel:734-222-8265">734-222-8265</a></h3>
+          <h3>Email: <a class="link" href="mailto:info@gatorpkg.com">info@gatorpkg.com</a> </h3>
+          <h3>Phone: <a class="link" href="tel:734-222-8265">734-222-8265</a></h3>
         </div>
         <MapComponent class="map"/>
       </div>
@@ -161,7 +161,7 @@ const submitForm = async (event) => {
   width: 90vw;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 
 .contact-header {
@@ -345,6 +345,6 @@ const submitForm = async (event) => {
 .contact-info hr {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 </style>

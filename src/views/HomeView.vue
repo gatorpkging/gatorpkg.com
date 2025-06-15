@@ -68,14 +68,14 @@ import FooterComponent from '@/components/FooterComponent.vue';
 .about-content {
   width: 90vw;
   max-width: 90vw;
-  margin: -2.25rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
   text-align: center;
 }
 
 .about-content hr {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 
 .about-content p {
@@ -119,6 +119,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
 .contact-info hr {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
 }
 </style>
