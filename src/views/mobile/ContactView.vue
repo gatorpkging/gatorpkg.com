@@ -1,6 +1,6 @@
 <script setup>
-import MapComponent from '@/components/MapComponent.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
+import MapComponent from '@/components/mobile/MapComponent.vue';
+import FooterComponent from '@/components/mobile/FooterComponent.vue';
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
 

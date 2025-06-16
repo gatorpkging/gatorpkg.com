@@ -46,7 +46,13 @@ export default {
 }
 
 .logo svg {
-  width: 75px;
-  height: 75px;
+  width: 4.5rem;
+  height: auto;
+}
+
+.footer p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.8rem;
 }
 </style>

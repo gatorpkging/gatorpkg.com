@@ -1,7 +1,7 @@
 <script setup>
 import GatorPkgIcon from '@/components/icons/GatorPkgIcon.vue';
-import ScrollingImageBannerComponent from '@/components/ScrollingImageBannerComponent.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
+import ScrollingImageBannerComponent from '@/components/mobile/ScrollingImageBannerComponent.vue';
+import FooterComponent from '@/components/mobile/FooterComponent.vue';
 </script>
 
 <template>
@@ -43,22 +43,23 @@ import FooterComponent from '@/components/FooterComponent.vue';
 }
 
 .about-header {
-  display: table;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 70vw;
   text-align: center;
 }
 
 .about-header .gator-pkg-icon {
-  display: table-cell;
-  width: 35rem;
+  width: 15rem;
   height: auto;
 }
 
 .about-header h1 {
   display: table-cell;
   position: relative;
-  font-size: 4rem;
-  margin: 1rem;
+  font-size: 2.5rem;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -66,8 +67,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 }
 
 .about-content {
-  width: 90vw;
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 1rem 1rem 1rem 1rem;
   text-align: center;
 }
@@ -79,7 +79,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 }
 
 .about-content p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -88,26 +88,25 @@ import FooterComponent from '@/components/FooterComponent.vue';
 }
 
 .contact-info {
-  width: 90vw;
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 1rem;
   text-align: center;
 }
 
 .contact-info img {
-  width: 130px;
+  width: 5rem;
   height: auto;
-  max-width: 500px;
+  max-width: 5rem;
   margin-top: 1rem;
 }
 
 .contact-info h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 .contact-info h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 0.3rem;
 }
 

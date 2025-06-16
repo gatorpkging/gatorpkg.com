@@ -1,0 +1,116 @@
+<script>
+const imagesPath = '/images/banner/';
+const images = [
+  imagesPath + '1.webp',
+  imagesPath + '2.webp',
+  imagesPath + '3.webp',
+  imagesPath + '4.webp',
+  imagesPath + '5.webp',
+  imagesPath + '6.webp',
+  imagesPath + '7.webp',
+  imagesPath + '8.webp',
+  imagesPath + '9.webp',
+  imagesPath + '10.webp'
+];
+
+export default {
+  name: "ScrollingImageBannerComponent",
+  props: {
+    text1: {
+      type: String,
+      default: 'High Quality Materials'
+    },
+    text2: {
+      type: String,
+      default: 'Custom Designs'
+    },
+    text3: {
+      type: String,
+      default: 'Competitive Pricing'
+    }
+  },
+  data() {
+    return {
+      images: images
+    };
+  },
+  computed: {
+    allImages() {
+      // Create enough duplicates to ensure smooth infinite scroll
+      return [...this.images, ...this.images, ...this.images];
+    }
+  }
+}
+</script>
+
+<template>
+  <div class="image-banner">
+    <div class="overlay-text">
+      <h2>{{ text1 }}</h2>
+      <hr />
+      <h2>{{ text2 }}</h2>
+      <hr />
+      <h2>{{ text3 }}</h2>
+    </div>
+    <div class="scrolling-images">
+      <img v-for="(image, index) in allImages" :key="index" :src="image" alt="Banner Image" loading="eager" />
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.image-banner {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scrolling-images {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+.scrolling-images img {
+  width: 325px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  border: 3px solid #000000;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-325px * 12)); }
+}
+
+.overlay-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 0.5rem;;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.overlay-text h2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(45, 52, 175);
+  text-align: center;
+  line-height: 1.5;
+  margin: 1rem;
+}
+
+.overlay-text hr {
+  position: relative;
+  border: none;
+  background: #a0a0a0;
+  height: 70px;
+  width: 7px;
+  position: relative;
+  transform: skewX(-20deg);
+}
+</style>
