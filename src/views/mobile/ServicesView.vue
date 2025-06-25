@@ -57,27 +57,29 @@ import FooterComponent from '@/components/mobile/FooterComponent.vue';
 .services-header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 70vw;
   text-align: center;
 }
 
 .services-header h1 {
   position: relative;
-  font-size: 4rem;
-  margin: 20px;
+  font-size: 2.5rem;
+  margin: 1.5rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .services-header p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .services-content {
   width: 90%;
   max-width: 90vw;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1.25rem 1.25rem 1.25rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,11 +92,11 @@ import FooterComponent from '@/components/mobile/FooterComponent.vue';
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border: 2px solid #222222;
-  width: 90vw;
+  width: 70vw;
 }
 
 .services-content h3 {
-  font-size: 1.5rem !important;
+  font-size: 1.15rem !important;
   line-height: 1.6 !important;
   margin-bottom: 20px !important;
   font-weight: normal !important;
@@ -103,7 +105,7 @@ import FooterComponent from '@/components/mobile/FooterComponent.vue';
 }
 
 .services-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
@@ -112,36 +114,39 @@ import FooterComponent from '@/components/mobile/FooterComponent.vue';
 
 .img-group {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 90vw;
   gap: 10px;
 }
 
 .img-group img {
   width: 100%;
   height: auto;
-  max-width: 20vw;
+  max-width: 70vw;
 }
 
 .contact-info {
-  width: 90vw;
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 1rem;
   text-align: center;
 }
 
 .contact-info img {
-  width: 130px;
+  width: 5rem;
   height: auto;
-  max-width: 500px;
+  max-width: 5rem;
   margin-top: 1rem;
 }
 
 .contact-info h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 .contact-info h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 0.3rem;
 }
 
@@ -155,5 +160,4 @@ import FooterComponent from '@/components/mobile/FooterComponent.vue';
   margin-bottom: 1.5rem;
   border: 2px solid #222222;
 }
-
 </style>

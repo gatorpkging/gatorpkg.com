@@ -91,13 +91,13 @@ const submitForm = async (event) => {
       <hr>
 
       <div class="map-with-text">
+        <MapComponent class="map"/>
         <div class="contact-text">
           <h1>Contact Us</h1>
           <h3>Contact: Julie Chapman (Office Manager / Customer Service)</h3>
           <h3>Email: <a class="link" href="mailto:info@gatorpkg.com">info@gatorpkg.com</a> </h3>
           <h3>Phone: <a class="link" href="tel:734-222-8265">734-222-8265</a></h3>
         </div>
-        <MapComponent class="map"/>
       </div>
 
       <div class="contact-form">
@@ -158,7 +158,7 @@ const submitForm = async (event) => {
 }
 
 .contact hr {
-  width: 90vw;
+  width: 70vw;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border: 2px solid #222222;
@@ -169,11 +169,13 @@ const submitForm = async (event) => {
   flex-direction: column;
   max-width: 70vw;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-header h1 {
   position: relative;
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin: 1.25rem 1.25rem -0.25rem 1.25rem;
   text-align: center;
   text-transform: uppercase;
@@ -182,10 +184,10 @@ const submitForm = async (event) => {
 
 .map-with-text {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90vw;
-  max-width: 90vw;
+  max-width: 80vw;
 }
 
 .contact-text {
@@ -196,19 +198,18 @@ const submitForm = async (event) => {
 }
 
 .contact-text h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
 .contact-text h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 0.3rem;
 }
 
 .map {
-  flex: 1;
   width: 100%;
   max-width: 100%;
-  height: 50vh;
+  height: 40vh;
 }
 
 .contact-form {
@@ -221,8 +222,8 @@ const submitForm = async (event) => {
   border: #303030 3px solid;
   background-color: #222222;
   border-radius: 10px;
-  width: 90vw;
-  min-width: 400px;
+  width: 80vw;
+  max-width: 80vw;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -235,7 +236,7 @@ const submitForm = async (event) => {
 }
 
 .contact-form label {
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 10px;
 }
 
@@ -314,26 +315,25 @@ const submitForm = async (event) => {
 }
 
 .contact-info {
-  width: 90vw;
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 1rem;
   text-align: center;
 }
 
 .contact-info img {
-  width: 130px;
+  width: 5rem;
   height: auto;
-  max-width: 500px;
+  max-width: 5rem;
   margin-top: 1rem;
 }
 
 .contact-info h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 .contact-info h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 0.3rem;
 }
 
@@ -346,5 +346,8 @@ const submitForm = async (event) => {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border: 2px solid #222222;
+  width: 70vw;
+  max-width: 70vw;
+  justify-self: center;
 }
 </style>
